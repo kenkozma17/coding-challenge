@@ -1,0 +1,314 @@
+/* Block: Body */
+body {
+  padding: 2rem 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Responsive Modifications for Body */
+@media only screen and (min-width: 768px) {
+  body {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    padding: 2rem 4rem;
+  }
+}
+
+/* Block: Slider Background */
+.slider-bg {
+  min-height: 1000px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  max-width: 1680px;
+  padding: 2rem 0 10rem 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .slider-bg {
+    min-height: 770px;
+    height: 100%;
+    padding: 2rem 0;
+  }
+}
+
+/* Element: Background Pseudo-element */
+.slider-bg::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(#4385c2, #4f28a4);
+  clip-path: polygon(0 20%, 53% 11%, 100% 11%, 100% 100%, 0 100%, 0 19%);
+}
+
+/* Responsive Modifications for Background Pseudo-element */
+@media only screen and (min-width: 768px) {
+  .slider-bg::before {
+    clip-path: polygon(0 24%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .slider-bg::before {
+    clip-path: polygon(0 36%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+/* Responsive Modifications for Grid */
+@media only screen and (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 5px;
+    align-items: start;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    align-items: center;
+  }
+}
+
+/* Block: Image */
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsive Modifications for Image */
+@media only screen and (min-width: 768px) {
+  .image-wrapper {
+    grid-column: span 3 / span 3;
+    justify-content: end;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .image-wrapper {
+    grid-column: span 2 / span 2;
+    justify-content: end;
+  }
+}
+
+/* Block: Quote */
+.quote {
+  color: white;
+  padding: 0 2rem;
+  position: relative;
+}
+
+/* Responsive Modifications for Quote */
+@media only screen and (min-width: 768px) {
+  .quote {
+    grid-column: span 3 / span 3;
+    padding: 0 4rem 0 2rem;
+    margin: 8rem 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .quote {
+    grid-column: span 3 / span 3;
+    padding: 0 10rem 0 4rem;
+  }
+}
+
+/* Element: Author */
+.quote .author {
+  text-align: right;
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 22px;
+  font-style: normal;
+}
+
+/* Responsive Modifications for Author */
+@media only screen and (min-width: 768px) {
+  .quote .author {
+    text-align: right;
+    font-size: 1.5rem;
+    line-height: 32px;
+  }
+}
+
+/* Element: Content */
+.quote .content {
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  font-size: 1.125rem;
+  position: relative;
+  margin: 0;
+}
+
+.quote-marks {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) {
+  .quote .content::before {
+    content: "“";
+    position: absolute;
+    left: -2rem;
+    font-size: 2.625rem;
+    top: 0.5rem;
+    font-weight: 700;
+  }
+
+  .quote .content::after {
+    content: "”";
+    position: absolute;
+    right: -2rem;
+    font-size: 2.625rem;
+    bottom: -0.75rem;
+    font-weight: 700;
+  }
+}
+
+/* Responsive Modifications for Content */
+@media only screen and (min-width: 768px) {
+  .quote .content {
+    font-size: 1.125rem;
+  }
+}
+
+/* Element: Heading */
+.quote h2 {
+  font-size: 1.5rem;
+  line-height: 30px;
+  font-style: normal;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+
+/* Responsive Modifications for Heading */
+@media only screen and (min-width: 768px) {
+  .quote h2 {
+    font-size: 2rem;
+    line-height: 39px;
+  }
+}
+
+/* Block: Slider Image */
+.slider-image {
+  width: 100%;
+  border-radius: 250px;
+}
+
+/* Responsive Modifications for Slider Image */
+@media only screen and (min-width: 768px) {
+  .slider-image {
+    width: 320px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .slider-image {
+    width: 360px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .slider-image {
+    width: 430px;
+  }
+}
+
+/* Block: Controls */
+.navigation-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 2rem 0;
+}
+
+/* Responsive Modifications for Controls */
+@media only screen and (min-width: 768px) {
+  .navigation-wrapper {
+    padding: 4rem 0;
+  }
+}
+
+/* Element: Arrow */
+.navigation-wrapper .arrow {
+  cursor: pointer;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* Responsive Modifications for Media Queries */
+@media only screen and (min-width: 768px) {
+  .mobile-only {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+/* Slider Styles */
+.keen-slider__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.dots {
+  display: flex;
+  padding: 10px 0;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.dot {
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.dot:focus {
+  outline: none;
+}
+
+.dot:hover {
+  background: #fff;
+}
+
+.dot--active {
+  background: #fff;
+}
+
+.arrow--right img {
+  transform: rotate(180deg);
+}
