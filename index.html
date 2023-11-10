@@ -11,10 +11,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css"
-    />
+    /> -->
 
     <link rel="stylesheet" href="style.css" />
   </head>
@@ -30,8 +30,24 @@
             />
           </figure>
           <article class="quote">
+            <div class="navigation-wrapper mobile-only">
+              <button class="arrow arrow--left">
+                <img src="/public/icons/arrow.svg" alt="Left Arrow" />
+              </button>
+              <div class="dot dot--active"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <button class="arrow arrow--right">
+                <img
+                  src="/public/icons/arrow.svg"
+                  class="invert"
+                  alt="Right Arrow"
+                />
+              </button>
+            </div>
             <h2>Puma</h2>
-            <span class="mobile-only quote-marks">“”</span>
+            <span class="mobile-only quote-marks">“ ”</span>
             <p class="content">
               Contrary to popular belief, Lorem Ipsum is not simply random
               text. It has roots in a piece of classical Latin literature from
@@ -44,54 +60,28 @@
             <p class="author">— John Doe, CEO</p>
           </article>
         </div>
-        <div class="grid keen-slider__slide">
-          <figure class="image-wrapper">
+
+        <div class="navigation-wrapper desktop-only">
+          <button class="arrow arrow--left">
+            <img src="/public/icons/arrow.svg" alt="Left Arrow" />
+          </button>
+          <div class="dot dot--active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <button class="arrow arrow--right">
             <img
-              class="slider-image"
-              src="/public/images/john-doe-1.jpg"
-              alt=""
+              src="/public/icons/arrow.svg"
+              class="invert"
+              alt="Right Arrow"
             />
-          </figure>
-          <article class="quote">
-            <h2>Nike</h2>
-            <span class="mobile-only quote-marks">“”</span>
-            <p class="content">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy
-              text ever since the 1500s, when an unknown printer took a galley
-              of type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-            </p>
-            <p class="author">— John Doe, CEO</p>
-          </article>
-        </div>
-        <div class="grid keen-slider__slide">
-          <figure class="image-wrapper">
-            <img
-              class="slider-image"
-              src="/public/images/philip-martin.jpg"
-              alt=""
-            />
-          </figure>
-          <article class="quote">
-            <h2>Adidas</h2>
-            <span class="mobile-only quote-marks">“”</span>
-            <p class="content">
-              Aenean a commodo risus. Morbi iaculis sem id turpis condimentum
-              placerat. Ut eleifend sodales ante. Aenean pellentesque commodo
-              consequat. Mauris scelerisque dignissim dignissim. Curabitur
-              posuere lorem vitae purus bibendum, aliquam accumsan dolor
-              rutrum. Phasellus laoreet varius enim.
-            </p>
-            <p class="author">— John Doe, CEO</p>
-          </article>
+          </button>
         </div>
       </div>
     </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script> -->
 
     <script src="index.js"></script>
   </body>
