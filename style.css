@@ -29,13 +29,13 @@ body {
 
 @media only screen and (min-width: 768px) {
   .slider-bg {
-    min-height: 770px;
+    /* min-height: 770px; */
     height: 100%;
     padding: 2rem 0;
+    background-image: none;
   }
 }
 
-/* Element: Background Pseudo-element */
 .slider-bg::before {
   content: "";
   position: absolute;
@@ -45,11 +45,26 @@ body {
   right: 0;
   bottom: 0;
   background-image: linear-gradient(#4385c2, #4f28a4);
-  clip-path: polygon(0 20%, 53% 11%, 100% 11%, 100% 100%, 0 100%, 0 19%);
+  clip-path: polygon(
+    51% 16%,
+    100% 12%,
+    100% 60%,
+    100% 100%,
+    0 100%,
+    0% 60%,
+    0 24%
+  );
+}
+/* Element: Background Pseudo-element */
+@media only screen and (min-width: 768px) {
+  .slider-bg::before {
+    background-image: linear-gradient(#4385c2, #4f28a4);
+    clip-path: url("#svgPath");
+  }
 }
 
 /* Responsive Modifications for Background Pseudo-element */
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .slider-bg::before {
     clip-path: polygon(0 24%, 100% 0%, 100% 100%, 0% 100%);
   }
@@ -59,7 +74,7 @@ body {
   .slider-bg::before {
     clip-path: polygon(0 36%, 100% 0%, 100% 100%, 0% 100%);
   }
-}
+} */
 
 /* Responsive Modifications for Grid */
 @media only screen and (min-width: 768px) {
@@ -67,14 +82,13 @@ body {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 5px;
-    align-items: start;
+    align-items: center;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
     gap: 20px;
     align-items: center;
   }
@@ -96,8 +110,8 @@ body {
 
 @media only screen and (min-width: 1024px) {
   .image-wrapper {
-    grid-column: span 2 / span 2;
-    justify-content: end;
+    grid-column: span 3 / span 3;
+    justify-content: center;
   }
 }
 
@@ -113,14 +127,14 @@ body {
   .quote {
     grid-column: span 3 / span 3;
     padding: 0 4rem 0 2rem;
-    margin: 8rem 0 0 0;
+    margin: 12rem 0 0 0;
   }
 }
 
 @media only screen and (min-width: 1024px) {
   .quote {
     grid-column: span 3 / span 3;
-    padding: 0 10rem 0 4rem;
+    padding: 0 10rem 0 0;
   }
 }
 
@@ -204,15 +218,15 @@ body {
 /* Block: Slider Image */
 .slider-image {
   width: 100%;
-  border-radius: 250px;
+  border-radius: 99rem;
 }
 
 /* Responsive Modifications for Slider Image */
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
   .slider-image {
     width: 320px;
   }
-}
+} */
 
 @media only screen and (min-width: 1024px) {
   .slider-image {
@@ -310,4 +324,8 @@ body {
 
 .arrow--right img {
   transform: rotate(180deg);
+}
+
+ul.navigation-wrapper {
+  list-style: none;
 }

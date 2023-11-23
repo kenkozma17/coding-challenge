@@ -20,6 +20,14 @@
   </head>
   <body>
     <main>
+      <svg height="0" width="0">
+        <defs>
+          <clipPath id="svgPath">
+            <path d="M1 295.5C535 75.5 1428 4.33333 1784 0.5V1005.5H1V295.5Z" stroke="black"/>
+          </clipPath>
+        </defs>
+      </svg>
+        
       <section class="slider-bg" id="slider">
         <div class="grid keen-slider__slide">
           <figure class="image-wrapper">
@@ -61,28 +69,40 @@
           </article>
         </div>
 
-        <div class="navigation-wrapper desktop-only">
-          <button class="arrow arrow--left">
-            <img src="/public/icons/arrow.svg" alt="Left Arrow" />
-          </button>
-          <div class="dot dot--active"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <div class="dot"></div>
-          <button class="arrow arrow--right">
-            <img
-              src="/public/icons/arrow.svg"
-              class="invert"
-              alt="Right Arrow"
-            />
-          </button>
-        </div>
+        <ul class="navigation-wrapper desktop-only">
+          <li>
+            <button class="arrow arrow--left">
+              <img src="/public/icons/arrow.svg" alt="Left Arrow" />
+            </button>
+          </li>
+          <li>
+            <div class="dot dot--active"></div>
+          </li>
+          <li>
+            <div class="dot"></div>
+          </li>
+          <li>
+            <div class="dot"></div>
+          </li>
+          <li>
+            <div class="dot"></div>
+          </li>
+          <li>
+            <button class="arrow arrow--right">
+              <img
+                src="/public/icons/arrow.svg"
+                class="invert"
+                alt="Right Arrow"
+              />
+            </button>
+          </li>
+        </ul>
       </div>
     </section>
     </main>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script> -->
 
-    <script src="index.js"></script>
+    <!-- <script src="index.js"></script> -->
   </body>
 </html>
